@@ -102,7 +102,6 @@ var app = {
 
   pollModule : {
 
-    pollName: "Vote on your favourite cryptocurrency",
     pollState:0,
     init:function () {
       var fbConfig = {
@@ -162,7 +161,7 @@ var app = {
       data = [data];
 
       var layout = {
-        title: "Current Polls",
+        title: "Vote on your favourite cryptocurrency",
         showlegend: true,
         height: 290,
         autosize: true,
@@ -175,8 +174,6 @@ var app = {
       }
 
       Plotly.newPlot( 'poll-chart', data , layout , options );
-
-      $("#poll-header").html('Poll<em style="margin-left: 20px; font-size: 15px;">' + app.pollModule.pollName + '</em>');
     }
  
   },
